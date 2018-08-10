@@ -86,7 +86,7 @@ compare() {
 		echo -e "\e[36m${dir}:\e[39m current ${current} | ${tag} | ${name}"
 	else
 		# add to the bad versions
-		if [[ "$dir" != "rstudio" ]] && [[ "$dir" != "bazel" ]]; then
+		if [[ "$dir" != "rstudio" ]] && [[ "$dir" != "bazel" ]] && [[ "$dir" != "mc" ]]; then
 			bad_versions+=( "${dir}" )
 		fi
 		echo -e "\e[31m${dir}:\e[39m current ${current} | ${tag} | ${name} | ${releases}"
@@ -101,6 +101,7 @@ hashicorp/consul
 coredns/coredns
 CouchPotato/CouchPotatoServer
 curl/curl
+kolide/fleet
 GoogleCloudPlatform/cloud-sdk-docker
 google/gitiles
 bazelbuild/bazel
@@ -109,9 +110,11 @@ irssi/irssi
 cryptodotis/irssi-otr
 keepassxreboot/keepassxc
 robertdavidgraham/masscan
+MidnightCommander/mc
 zyedidia/micro
 nzbget/nzbget
 bitly/oauth2_proxy
+facebook/osquery
 Tautulli/Tautulli
 perkeep/perkeep
 powershell/powershell
